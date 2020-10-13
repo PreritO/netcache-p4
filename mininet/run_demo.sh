@@ -14,10 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BMV2_PATH=../bmv2
-P4C_BM_PATH=../p4c-bmv2
+BMV2_PATH=/home/nvmswitch/behavioral-model
+P4C_BM_PATH=../../../utils/p4runtime_lib
 
-P4C_BM_SCRIPT=$P4C_BM_PATH/p4c_bm/__main__.py
+P4C_BM_SCRIPT=$P4C_BM_PATH/__init__.py
 
 SWITCH_PATH=$BMV2_PATH/targets/simple_switch/simple_switch
 

@@ -22,6 +22,7 @@ s.bind((CONTROLLER_IP, NC_PORT))
 op = NC_UPDATE_REQUEST
 op_field = struct.pack("B", op)
 f = open(path_hot, "r")
+counter = 0
 for line in f.readlines():
     line = line.split()
     key_header = line[0]
@@ -56,7 +57,7 @@ while True:
     key_header = struct.unpack(">I", key_field[:4])[0]
     load = struct.unpack(">IIII", load_field)
     
-    counter = counter + 1
+    counter += 1
     print "\tHot Item:", key_header, load
     
     #f.write(str(key_header) + ' ')
